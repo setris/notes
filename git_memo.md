@@ -44,25 +44,21 @@ merged it into `develop`:
 git branch -d some_feature
 ```
 
-#### Push changes to Gerrit (using example branch names)
+#### Push changes to Gerrit
 
-    git push origin HEAD:refs/for/develop
-
-    git push origin HEAD:refs/for/release-AC2
-
+The following pushes the contents of the current branch to Gerrit,
+targeting the branch `develop`.
+```
+git push origin HEAD:refs/for/develop
+```
 
 #### Revise the most recent commit
 
-    Only use this for commits that haven't been pushed to the remote
-    repository.
+```
+git commit --amend
+```
 
-    # Original commit
-    # Make some changes (git add, etc.)
-
-    git commit --amend
-
-    Can change the commit message if desired, but keep the original Change-Id.
-
+Can change the commit message if desired, but keep the original Change-Id.
 
 #### Squash commits with interactive rebase
 
