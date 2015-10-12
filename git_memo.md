@@ -9,10 +9,8 @@ Given the following:
 1. Start by checking out `develop`, then create a new branch `some_feature`
    from it:
 
-        ```
         git checkout develop
         git checkout -b some_feature
-        ```
 
 2. Do work in your branch `some_feature` and commit your changes.
    By now, the remote `develop` branch may have been updated with
@@ -22,10 +20,8 @@ Given the following:
    merge them into `some_feature`, and place your work on top
    (this is called *rebasing*):
 
-        ```
         git fetch origin
         git rebase origin/develop
-        ```
 
    This step is usually repeated any number of times while you are
    working on your feature.
@@ -35,10 +31,8 @@ Given the following:
    `origin/develop`, then merge `some_feature` back into your mainline
    branch `develop`:
 
-        ```
         git checkout develop
         git merge --ff-only some_feature
-        ```
 
 
 #### Push changes to Gerrit (using example branch names)
