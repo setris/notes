@@ -6,33 +6,36 @@ Given the following:
 * Your local branch `develop` tracks the remote branch `develop`,
   also known as `origin/develop`
 
-1. Start by checking out `develop`, then create a new branch `some_feature`
-   from it:
+Start by checking out `develop`, then create a new branch `some_feature`
+from it:
 
-        git checkout develop
-        git checkout -b some_feature
+```
+git checkout develop
+git checkout -b some_feature
+```
 
-2. Do work in your branch `some_feature` and commit your changes.
-   By now, the remote `develop` branch may have been updated with
-   new changes by other contributors.
+Do work in your branch `some_feature` and commit your changes.
+By now, the remote `develop` branch may have been updated with
+new changes by other contributors.
 
-   While you are on the branch `some_feature`, let's fetch those changes,
-   merge them into `some_feature`, and place your work on top
-   (this is called *rebasing*):
+While you are on the branch `some_feature`, fetch those changes,
+merge them into `some_feature`, and place your work on top
+(this is called *rebasing*):
 
-        git fetch origin
-        git rebase origin/develop
+```
+git fetch origin
+git rebase origin/develop
+```
 
-   This step is usually repeated any number of times while you are
-   working on your feature.
+Once you finish working on your feature, rebase one last time to
+ensure that `some_feature` contains the most recent commits from
+`origin/develop`, then merge `some_feature` back into your mainline
+branch `develop`:
 
-3. Once you finish working on your feature, rebase one last time to
-   ensure that `some_feature` contains the most recent commits from
-   `origin/develop`, then merge `some_feature` back into your mainline
-   branch `develop`:
-
-        git checkout develop
-        git merge --ff-only some_feature
+```
+git checkout develop
+git merge --ff-only some_feature
+```
 
 
 #### Push changes to Gerrit (using example branch names)
