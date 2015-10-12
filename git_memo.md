@@ -1,4 +1,4 @@
-Rebase workflow using topic branches
+### Rebase workflow using topic branches
 
     Given that 'develop' is the main local branch:
 
@@ -21,14 +21,14 @@ Rebase workflow using topic branches
     git merge --ff-only some_feature
 
 
-Push changes to Gerrit (using example branch names)
+### Push changes to Gerrit (using example branch names)
 
     git push origin HEAD:refs/for/develop
 
     git push origin HEAD:refs/for/release-AC2
 
 
-Revise the most recent commit
+### Revise the most recent commit
 
     Only use this for commits that haven't been pushed to the remote
     repository.
@@ -41,7 +41,7 @@ Revise the most recent commit
     Can change the commit message if desired, but keep the original Change-Id.
 
 
-Squash commits with interactive rebase
+### Squash commits with interactive rebase
 
     Only use this for commits that haven't been pushed to the remote
     repository. The following lets us look at the last N commits (including
@@ -53,7 +53,7 @@ Squash commits with interactive rebase
     Keep the original Change-Id.
 
 
-Push a local branch to the repository
+### Push a local branch to the repository
 
     git push <remote-name> <branch-name>
 
@@ -73,7 +73,7 @@ Push a local branch to the repository
     (or following our example, git push -u origin foo)
 
 
-Find out which remote branch a local branch is tracking
+### Find out which remote branch a local branch is tracking
 
     git branch -vv
 
@@ -82,7 +82,7 @@ Find out which remote branch a local branch is tracking
     git remote show origin
 
 
-Create a new branch and have it track a remote branch of the same name
+### Create a new branch and have it track a remote branch of the same name
 
     git checkout -b test remote-name/test
 
@@ -91,7 +91,7 @@ Create a new branch and have it track a remote branch of the same name
     git checkout test
 
 
-Set a local existing branch to track a remote branch
+### Set a local existing branch to track a remote branch
     
     The following works as of Git 1.8.0
 
@@ -107,7 +107,7 @@ Set a local existing branch to track a remote branch
         git branch -u upstream/foo foo
 
 
-Configure git to use Sublime Text as its default editor
+### Configure git to use Sublime Text as its default editor
 
     * First, make a symbolic link to the Sublime Text editor
       (Assuming that you want to store the symbolic link in ~/bin)
@@ -135,22 +135,22 @@ Configure git to use Sublime Text as its default editor
       returning.
 
 
-Show a more compact view of git log with full hashes of commits
+### Show a more compact view of git log with full hashes of commits
 
     git log --pretty=oneline
 
 
-Another way of viewing the log of all commits from all branches
+### Another way of viewing the log of all commits from all branches
 
     git log --all --graph --decorate --pretty=oneline
 
 
-View the evolution of a range of lines in a file
+### View the evolution of a range of lines in a file
 
     git log --pretty=short -u -L <start_line>,<end_line>:<file>
 
 
-View a particular version of a file
+### View a particular version of a file
 
     git show <revision number>:path/to/file
 
@@ -158,7 +158,7 @@ View a particular version of a file
           numbers on within 'less', type -N
 
 
-Check where HEAD is pointing to
+### Check where HEAD is pointing to
 
     In the root directory of the repository, run
 
