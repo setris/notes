@@ -6,7 +6,7 @@ Given the following:
 * Your local branch `develop` tracks the remote branch `develop`,
   also known as `origin/develop`
 
-Start by checking out `develop`, then create a new branch `some_feature`
+1. Start by checking out `develop`, then create a new branch `some_feature`
 from it:
 
 ```
@@ -14,21 +14,26 @@ git checkout develop
 git checkout -b some_feature
 ```
 
-Do work in your branch `some_feature` and commit your changes.
+2. Do work in your branch `some_feature` and commit your changes.
 By now, the remote `develop` branch may have been updated with
-new changes.
+new changes by other contributors.
 
-While we are on the branch `some_feature`, let's
-fetch those changes, merge them into `some_feature`, and place
-our work on top (this is called *rebasing*):
+While you are on the branch `some_feature`, let's fetch those changes,
+merge them into `some_feature`, and place your work on top
+(this is called *rebasing*):
 
 ```
 git fetch origin
 git rebase origin/develop
 ```
 
-Once we finish our feature and rebase, we are ready to merge our
-branch `some_feature` into our mainline branch `develop`:
+This step is usually repeated any number of times while you are
+working on your feature.
+
+3. Once you finish working on your feature, rebase one last time to
+ensure that `some_feature` contains the most recent commits from
+`origin/develop`, then merge `some_feature` back into your mainline
+branch `develop`:
 
 ```
 git checkout develop
