@@ -29,14 +29,20 @@ git rebase origin/develop
 
 Once you finish working on your feature, rebase one last time to
 ensure that `some_feature` contains the most recent commits from
-`origin/develop`, then merge `some_feature` back into your mainline
-branch `develop`:
+`origin/develop` (as shown above), then merge `some_feature` back
+into your mainline branch `develop`:
 
 ```
 git checkout develop
 git merge --ff-only some_feature
 ```
 
+Finally, you can delete the branch `some_feature` since you already
+merged it into `develop`:
+
+```
+git branch -d some_feature
+```
 
 #### Push changes to Gerrit (using example branch names)
 
