@@ -7,7 +7,7 @@ Given the following:
   also known as `origin/develop`
 
 1. Start by checking out `develop`, then create a new branch `some_feature`
-from it:
+   from it:
 
         ```
         git checkout develop
@@ -15,25 +15,25 @@ from it:
         ```
 
 2. Do work in your branch `some_feature` and commit your changes.
-By now, the remote `develop` branch may have been updated with
-new changes by other contributors.
+   By now, the remote `develop` branch may have been updated with
+   new changes by other contributors.
 
-While you are on the branch `some_feature`, let's fetch those changes,
-merge them into `some_feature`, and place your work on top
-(this is called *rebasing*):
+   While you are on the branch `some_feature`, let's fetch those changes,
+   merge them into `some_feature`, and place your work on top
+   (this is called *rebasing*):
 
         ```
         git fetch origin
         git rebase origin/develop
         ```
 
-This step is usually repeated any number of times while you are
-working on your feature.
+   This step is usually repeated any number of times while you are
+   working on your feature.
 
 3. Once you finish working on your feature, rebase one last time to
-ensure that `some_feature` contains the most recent commits from
-`origin/develop`, then merge `some_feature` back into your mainline
-branch `develop`:
+   ensure that `some_feature` contains the most recent commits from
+   `origin/develop`, then merge `some_feature` back into your mainline
+   branch `develop`:
 
         ```
         git checkout develop
