@@ -1,6 +1,3 @@
-[Typical rebase workflow](#typical-rebase-workflow)
-[Push changes to Gerrit](#push-changes-to-gerrit)
-
 ### Typical rebase workflow
 
 Given the following:
@@ -179,3 +176,7 @@ To toggle line numbers on within `less`, type `-N`.
 In the root directory of the repository, run
 
     cat .git/HEAD
+
+### Check where HEAD is pointing to
+
+Testing
