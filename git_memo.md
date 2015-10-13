@@ -136,10 +136,10 @@ Now running `git commit` will launch Sublime Text in a new window (`-n`)
 with a file for your commit message, and git will wait until you have
 saved and closed the file containing your commit message (`-w`).
 Note that the `-w` switch is necessary for Sublime Text to interact with
-git properly; it makes Sublime wait for the file to be closed before
+git properly; it makes Sublime Text wait for the file to be closed before
 returning.
 
-### Show a more compact view of git log with full hashes of commits
+### Show a compact view of git log with full hashes of commits
 
     git log --pretty=oneline
 
