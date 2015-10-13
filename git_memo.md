@@ -54,23 +54,25 @@ git push origin HEAD:refs/for/develop
 
 #### Revise the most recent commit
 
+After making changes:
+
 ```
 git commit --amend
 ```
 
-Can change the commit message if desired, but keep the original Change-Id.
+You can change the commit message if you want, but keep the original Change-Id.
 
 #### Squash commits with interactive rebase
 
-    Only use this for commits that haven't been pushed to the remote
-    repository. The following lets us look at the last N commits (including
-    the current commit that HEAD is referencing), and make adjustments
-    to them.
+**Note**: Only use this for commits that haven't been pushed to the remote
+repository.
+
+The following lets us view the last `N` commits (including the current
+commit that `HEAD` is referencing), and make adjustments to them.
 
     git rebase -i HEAD~N
 
-    Keep the original Change-Id.
-
+Keep the original Change-Id.
 
 #### Push a local branch to the repository
 
