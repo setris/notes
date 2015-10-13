@@ -1,5 +1,5 @@
-[Typical rebase workflow](typical-rebase-workflow)
-[Push changes to Gerrit](push-changes-to-gerrit)
+[Typical rebase workflow](#typical-rebase-workflow)
+[Push changes to Gerrit](#push-changes-to-gerrit)
 
 ### Typical rebase workflow
 
