@@ -1,4 +1,4 @@
-#### Typical rebase workflow
+### Typical rebase workflow
 
 Given the following:
 * `develop` is your 'mainline' local branch
@@ -36,14 +36,14 @@ merged it into `develop`:
 
     git branch -d some_feature
 
-#### Push changes to Gerrit
+### Push changes to Gerrit
 
 The following pushes the contents of the current branch to Gerrit,
 targeting the branch `develop`.
 
     git push origin HEAD:refs/for/develop
 
-#### Revise the most recent commit
+### Revise the most recent commit
 
 After making changes:
 
@@ -51,7 +51,7 @@ After making changes:
 
 You can change the commit message if you want, but keep the original Change-Id.
 
-#### Squash commits with interactive rebase
+### Squash commits with interactive rebase
 
 **Note**: Only use this for commits that haven't been pushed to the remote
 repository.
@@ -63,7 +63,7 @@ commit that `HEAD` is referencing), and make adjustments to them.
 
 Keep the original Change-Id.
 
-#### Push a local branch to the repository
+### Push a local branch to the repository
 
     git push remote-name branch-name
 
@@ -83,7 +83,7 @@ to create, `origin/foo`:
 
 (or following our example, `git push -u origin foo`)
 
-#### Find out which remote branch a local branch is tracking
+### Find out which remote branch a local branch is tracking
 
     git branch -vv
 
@@ -91,7 +91,7 @@ or
 
     git remote show origin
 
-#### Create a new branch and have it track a remote branch of the same name
+### Create a new branch and have it track a remote branch of the same name
 
     git checkout -b test remote-name/test
 
@@ -99,7 +99,7 @@ or
 
     git checkout test
 
-#### Set a local existing branch to track a remote branch
+### Set a local existing branch to track a remote branch
     
 The following works as of Git 1.8.0. Given a local branch `foo`
 and a remote `origin`:
@@ -113,7 +113,7 @@ to track `origin/foo`:
 
     git branch -u origin/foo foo
 
-#### Configure git to use Sublime Text as its default editor
+### Configure git to use Sublime Text as its default editor
 
 First, make a symbolic link to the Sublime Text editor
 (assuming that you want to store the symbolic link under ~/bin):
@@ -139,26 +139,26 @@ Note that the `-w` switch is necessary for Sublime Text to interact with
 git properly; it makes Sublime wait for the file to be closed before
 returning.
 
-#### Show a more compact view of git log with full hashes of commits
+### Show a more compact view of git log with full hashes of commits
 
     git log --pretty=oneline
 
-#### Show a log of all commits from all branches
+### Show a log of all commits from all branches
 
     git log --all --graph --decorate --pretty=oneline
 
-#### View the evolution of a range of lines in a file
+### View the evolution of a range of lines in a file
 
     git log --pretty=short -u -L start-line,end-line:file
 
-#### View a particular version of a file
+### View a particular version of a file
 
     git show revision-number:path/to/file
 
 **Note**: This opens up the file in `less` without line numbers.
 To toggle line numbers on within `less`, type `-N`.
 
-#### Check where HEAD is pointing to
+### Check where HEAD is pointing to
 
 In the root directory of the repository, run
 
