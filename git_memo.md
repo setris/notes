@@ -176,7 +176,3 @@ To toggle line numbers on within `less`, type `-N`.
 In the root directory of the repository, run
 
     cat .git/HEAD
-
-### Check where HEAD is pointing to
-
-Testing
