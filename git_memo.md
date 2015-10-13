@@ -1,3 +1,6 @@
+[Typical rebase workflow](typical-rebase-workflow)
+[Push changes to Gerrit](push-changes-to-gerrit)
+
 ### Typical rebase workflow
 
 Given the following:
@@ -36,12 +39,14 @@ merged it into `develop`:
 
     git branch -d some_feature
 
+
 ### Push changes to Gerrit
 
 The following pushes the contents of the current branch to Gerrit,
 targeting the branch `develop`.
 
     git push origin HEAD:refs/for/develop
+
 
 ### Revise the most recent commit
 
@@ -50,6 +55,7 @@ After making changes:
     git commit --amend
 
 You can change the commit message if you want, but keep the original Change-Id.
+
 
 ### Squash commits with interactive rebase
 
@@ -62,6 +68,7 @@ commit that `HEAD` is referencing), and make adjustments to them.
     git rebase -i HEAD~N
 
 Keep the original Change-Id.
+
 
 ### Push a local branch to the repository
 
@@ -83,6 +90,7 @@ to create, `origin/foo`:
 
 (or following our example, `git push -u origin foo`)
 
+
 ### Find out which remote branch a local branch is tracking
 
     git branch -vv
@@ -91,6 +99,7 @@ or
 
     git remote show origin
 
+
 ### Create a new branch and have it track a remote branch of the same name
 
     git checkout -b test remote-name/test
@@ -98,6 +107,7 @@ or
 or
 
     git checkout test
+
 
 ### Set a local existing branch to track a remote branch
     
@@ -112,6 +122,7 @@ If you are not on the branch `foo` but would like `foo`
 to track `origin/foo`:
 
     git branch -u origin/foo foo
+
 
 ### Configure git to use Sublime Text as its default editor
 
@@ -139,17 +150,21 @@ Note that the `-w` switch is necessary for Sublime Text to interact with
 git properly; it makes Sublime Text wait for the file to be closed before
 returning.
 
+
 ### Show a compact view of git log with full hashes of commits
 
     git log --pretty=oneline
+
 
 ### Show a log of all commits from all branches
 
     git log --all --graph --decorate --pretty=oneline
 
+
 ### View the evolution of a range of lines in a file
 
     git log --pretty=short -u -L start-line,end-line:file
+
 
 ### View a particular version of a file
 
@@ -157,6 +172,7 @@ returning.
 
 **Note**: This opens up the file in `less` without line numbers.
 To toggle line numbers on within `less`, type `-N`.
+
 
 ### Check where HEAD is pointing to
 
