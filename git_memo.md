@@ -176,3 +176,8 @@ To toggle line numbers on within `less`, type `-N`.
 In the root directory of the repository, run
 
     cat .git/HEAD
+
+
+### Undo the last commit
+
+    git reset --soft HEAD~1
