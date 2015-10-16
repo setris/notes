@@ -48,16 +48,16 @@ contents should be extracted (must create directory first, though).
 
 ### Recursively search file contents in a directory
 
-#### Standard
+##### Standard
     grep -r "string" .
 
-#### Ignore case when searching
+##### Ignore case when searching
     grep -ri "string" .
 
-#### Print filenames only
+##### Print filenames only
     grep -r -l "string" .
 
-#### Filter based on file extension
+##### Filter based on file extension
     grep --include=\*.{lux, java} -ri -e "foo" .
 
 In the above example, `-e` explicitly specifies the search string
