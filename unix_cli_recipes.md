@@ -60,4 +60,4 @@ contents should be extracted (must create directory first, though).
 ##### Filter based on file extension
     grep --include=\*.{lux, java} -ri -e "foo" <directory path>
 
-In the above example, `-e` explicitly specifies the search string
+In the above example, `-e` explicitly specifies the search string.
