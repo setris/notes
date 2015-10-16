@@ -49,15 +49,15 @@ contents should be extracted (must create directory first, though).
 ### Recursively search file contents in a directory
 
 ##### Standard
-    grep -r "string" .
+    grep -r "string" <directory path>
 
 ##### Ignore case when searching
-    grep -ri "string" .
+    grep -ri "string" <directory path>
 
 ##### Print filenames only
-    grep -r -l "string" .
+    grep -r -l "string" <directory path> 
 
 ##### Filter based on file extension
-    grep --include=\*.{lux, java} -ri -e "foo" .
+    grep --include=\*.{lux, java} -ri -e "foo" <directory path>
 
 In the above example, `-e` explicitly specifies the search string
