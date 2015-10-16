@@ -17,7 +17,7 @@ a couple of things:
          tar.gz file
 
 * **z**: tells `tar` to decompress the archive using `gzip`
-         (note: some implemetations of `tar`, such as `bsdtar`, recognize
+         (Note: Some implemetations of `tar`, such as `bsdtar`, recognize
          the compression algorithm automatically when reading archives;
          in that case, this flag is ignored. But it does not hurt to
          leave it in)
@@ -30,29 +30,34 @@ a couple of things:
 One can optionally include the `-C` option to specify a directory to which the
 contents should be extracted (must create directory first, though).
 
+
 ### Concatenate multiple files/directories into a single tar file
 
     tar -cvf foo.tar <multiple files and/or directories>
+
 
 ### Concatenate and compress multiple files/directories into a single tar.gz file
 
     tar -czvf foo.tar.gz <multiple files and/or directories>
 
+
 ### List contents of tar or tar.gz file
 
     tar -tf <foo.tar | foo.tar.gz>
 
+
 ### Recursively search file contents in a directory
 
-    grep -r "string" .      # standard
-    grep -ri "string" .     # ignore case when searching
-    grep -r -l "string" .   # print only the filenames
+#### Standard
+    grep -r "string" .
 
-    All the examples above deal with search the current working directory,
-    but of course one can specify the search to start at any desired path.
+#### Ignore case when searching
+    grep -ri "string" .
 
-### Recursively search file contents in a directory based on file extension
+#### Print filenames only
+    grep -r -l "string" .
 
+#### Filter based on file extension
     grep --include=\*.{lux, java} -ri -e "foo" .
 
-    In the above example, -e explicitly specifies the search string
+In the above example, `-e` explicitly specifies the search string
