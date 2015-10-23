@@ -1,4 +1,4 @@
-### Extracting the contents of a tar.gz file
+### Extract the contents of a tar.gz file
     
     tar -zxvf foo.tar.gz
 
@@ -49,15 +49,29 @@ contents should be extracted (must create directory first, though).
 ### Recursively search file contents in a directory
 
 ##### Standard
+
     grep -r "string" <directory path>
 
 ##### Ignore case when searching
+
     grep -ri "string" <directory path>
 
 ##### Print filenames only
+
     grep -r -l "string" <directory path> 
 
 ##### Filter based on file extension
-    grep --include=\*.{lux, java} -ri -e "foo" <directory path>
 
-In the above example, `-e` explicitly specifies the search string.
+    grep --include=\*.{lux,java} -ri -e "foo" <directory path>
+
+In the above example, `-e` explicitly specifies the search string. Including
+the `-e` switch is optional in the above example (the command would still work
+the same), but it's still good to know.
+
+##### Search with extended regular expressions
+
+    grep -E -r "nice(Cat|Dog|Boat)" <directory path>
+
+or
+
+    egrep -r "nice(Cat|Dog|Boat)" <directory path>
