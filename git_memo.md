@@ -108,11 +108,11 @@ or
 
 ### Delete a branch
 
-If the branch has already been merged into your mainline branch
+If the branch has already been merged into your mainline branch:
 
     git branch -d branch-name
 
-Otherwise
+Otherwise:
 
     git branch -D branch-name
 
