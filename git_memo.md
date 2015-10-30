@@ -106,6 +106,17 @@ or
     git checkout test
 
 
+### Delete a branch
+
+If the branch has already been merged into your mainline branch
+
+    git branch -d branch-name
+
+Otherwise
+
+    git branch -D branch-name
+
+
 ### Set a local existing branch to track a remote branch
     
 The following works as of Git 1.8.0. Given a local branch `foo`
