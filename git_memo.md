@@ -118,7 +118,7 @@ Otherwise:
 
 
 ### Set a local existing branch to track a remote branch
-    
+
 The following works as of Git 1.8.0. Given a local branch `foo`
 and a remote `origin`:
 

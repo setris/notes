@@ -1,8 +1,8 @@
 ### Extract the contents of a tar.gz file
-    
+
     tar -zxvf foo.tar.gz
 
-or 
+or
 
     tar -xf foo.tar.gz
 
@@ -58,7 +58,7 @@ contents should be extracted (must create directory first, though).
 
 ##### Print filenames only
 
-    grep -r -l "string" <directory path> 
+    grep -r -l "string" <directory path>
 
 ##### Filter based on file extension
 
