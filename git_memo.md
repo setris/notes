@@ -209,9 +209,10 @@ Works for versions of Git >= 1.6.1
 ### Diff specific versions of a file
 
 Compare the current (the version in your working tree) `foo.txt` with
-the revision at `HEAD`:
+the `foo.txt` at `HEAD`:
 
     git diff HEAD:foo.txt foo.txt
 
-There are many ways of specifying a revision (e.g. SHA-1 hash), which you
-can use in the above example instead of `HEAD`
+The general syntax is `revision:filename`. There are many ways of specifying
+a revision (e.g. SHA-1 hash), which you can use in the above example instead
+of `HEAD`
