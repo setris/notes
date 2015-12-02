@@ -192,3 +192,15 @@ In the root directory of the repository, run
 ### Undo the last commit
 
     git reset --soft HEAD~1
+
+
+### Stage all changes of a branch `some-branch` into the current branch
+
+    git merge --no-commit --squash some-branch
+
+
+### Abort a merge that encountered conflicts
+
+Works for versions of Git >= 1.6.1
+
+    git reset --merge
