@@ -79,8 +79,8 @@ Where `remote-name` is typically `origin`. For example,
 
     git push origin HEAD:refs/for/develop
 
-To create an upstream branch (e.g. so a subsequent `git pull` will know
-that local branch `foo` is linked to the remote branch we are about
+To create an upstream branch so a subsequent `git pull` will know
+that the local branch `foo` is linked to the remote branch we are about
 to create, `origin/foo`:
 
     git push -u remote-name branch-name
@@ -216,3 +216,14 @@ the `foo.txt` at `HEAD`:
 The general syntax is `revision:filename`. There are many ways of specifying
 a revision (e.g. SHA-1 hash), which you can use in the above example instead
 of `HEAD`
+
+
+### Diff the tips of two branches
+
+Show what's in b2 that's not in b1:
+
+    git diff b1..b2
+
+Show what's in b1 XOR b2 (either in b1 or b2, but not both)
+
+    git diff b1...b2
