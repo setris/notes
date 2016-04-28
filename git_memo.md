@@ -224,6 +224,6 @@ Show what's in b2 that's not in b1:
 
     git diff b1..b2
 
-Show what's in b1 XOR b2 (either in b1 or b2, but not both)
+Show changes that occurred on b2 since b1 was started off of it (i.e. their common ancestor):
 
     git diff b1...b2
