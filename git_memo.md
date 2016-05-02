@@ -222,6 +222,10 @@ of `HEAD`
 
 Show what's in b2 that's not in b1:
 
+    git diff b1 b2
+
+or
+
     git diff b1..b2
 
 Show changes that occurred on b2 since b1 was started off of it (i.e. their common ancestor):
