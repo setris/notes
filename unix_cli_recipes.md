@@ -66,7 +66,9 @@ contents should be extracted (must create directory first, though).
 
 Notes:
 * For the `--include=\*.{lux,java}` part, note that there must be no whitespace
-  between `lux,` and `java` within the curly brackets.
+  between `lux,` and `java` within the curly brackets. In the general case, no
+  whitespace is allowed before or after delimiting commas in the list of file
+  extensions.
 * In the above example, `-e` explicitly specifies the search string. Including
   the `-e` switch is optional in the above example (the command would still work
   the same), but it's still good to know.
