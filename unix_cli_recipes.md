@@ -64,9 +64,12 @@ contents should be extracted (must create directory first, though).
 
     grep --include=\*.{lux,java} -ri -e "foo" <directory path>
 
-In the above example, `-e` explicitly specifies the search string. Including
-the `-e` switch is optional in the above example (the command would still work
-the same), but it's still good to know.
+Notes:
+* For the `--include=\*.{lux,java}` part, note that there must be no whitespace
+  between `lux,` and `java` within the curly brackets.
+* In the above example, `-e` explicitly specifies the search string. Including
+  the `-e` switch is optional in the above example (the command would still work
+  the same), but it's still good to know.
 
 ##### Search with extended regular expressions
 
