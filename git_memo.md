@@ -45,6 +45,14 @@ targeting the branch `develop`.
     git push origin HEAD:refs/for/develop
 
 
+### Push commits from one branch to another
+
+    git push <remote> <source branch>:<destination branch>
+
+Note that this will only work if it's a fast-forward of the destination
+branch.
+
+
 ### Revise the most recent commit
 
 After making changes:
@@ -106,7 +114,24 @@ or
     git checkout test
 
 
-### Delete a branch
+### Review a patch set from Gerrit
+
+1. Go to the change using the Gerrit web UI
+2. At the top right, select the patch set you want to review
+   by using the "Patch Sets (`x`/`y`)" button. `x` is the number
+   of the patch set you want to review, and `y` is the total number
+   of patch sets.
+3. Next, click the "Download" button to the right of the
+   "Patch Sets (`x`/`y`)" button.
+4. Copy and run the command line command for "Checkout" which should look
+   something like this:
+       git fetch ssh://user@domain.com:9999/project refs/changes/66/190366/4 && git checkout FETCH_HEAD
+   This will put you in a "detached HEAD" state.
+5. Then create a new branch for the patch set
+       git checkout -b 190366-4
+
+
+### Delete a branch locally
 
 If the branch has already been merged into your mainline branch:
 
