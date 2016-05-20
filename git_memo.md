@@ -125,7 +125,7 @@ or
    "Patch Sets (`x`/`y`)" button.
 4. Copy and run the command line command for "Checkout" which should look
    something like this:
-   ```git fetch ssh://user@domain.com:9999/project refs/changes/66/190366/4 && git checkout FETCH_HEAD```
+   ```git fetch ssh://user@domain.com:9999/project refs/changes/66/190366/4 && git checkout FETCH_HEAD```.
    This will put you in a "detached HEAD" state.
 5. Then create a new branch for the patch set
        git checkout -b 190366-4
