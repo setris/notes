@@ -114,6 +114,11 @@ or
     git checkout test
 
 
+### Check out a specific commit to a new branch
+
+    git checkout -b branch-name revision-hash
+
+
 ### Review a patch set from Gerrit
 
 1. Go to the change using the Gerrit web UI
@@ -201,7 +206,7 @@ returning.
 
 ### View a particular version of a file
 
-    git show revision-number:path/to/file
+    git show revision-hash:path/to/file
 
 **Note**: This opens up the file in `less` without line numbers.
 To toggle line numbers on within `less`, type `-N`.
