@@ -80,3 +80,8 @@ Notes:
 or
 
     egrep -r "nice(Cat|Dog|Boat)" <directory path>
+
+
+### Find local IP address
+
+    ifconfig | grep inet

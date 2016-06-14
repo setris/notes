@@ -47,7 +47,7 @@ targeting the branch `develop`.
 
 ### Push commits from one branch to another
 
-    git push <remote> <source branch>:<destination branch>
+    git push <remote name> <source branch>:<destination branch>
 
 Note that this will only work if it's a fast-forward of the destination
 branch.
@@ -136,7 +136,7 @@ or
        git checkout -b 190366-4
 
 
-### Delete a branch locally
+### Delete a local branch
 
 If the branch has already been merged into your mainline branch:
 
@@ -145,6 +145,17 @@ If the branch has already been merged into your mainline branch:
 Otherwise:
 
     git branch -D branch-name
+
+
+### Delete a remote branch
+
+The following works as of Git 1.7.0:
+
+    git push origin --delete <branch name>
+
+or you can use
+
+    git push origin :<branch name>
 
 
 ### Set a local existing branch to track a remote branch
@@ -261,3 +272,27 @@ or
 Show changes that occurred on b2 since b1 was started off of it (i.e. their common ancestor):
 
     git diff b1...b2
+
+
+### Cherry-pick specific changes from another branch
+
+Using the example from @ariejan's blog post on the subject:
+
+    dd2e86 - 946992 - 9143a9 - a6fd86 - 5a6057 [master]
+           \
+            76cada - 62ecb3 - b886a0 [feature]
+
+Cherry pick commit `62ecb3` into the master branch:
+
+    git checkout master
+    git cherry-pick 62ecb3
+
+And in general, given:
+
+* `stable` is the branch you want to cherry-pick a commit into
+* `<revision-hash>` is the commit you want to cherry-pick
+
+To cherry-pick the commit `<revision-hash>` from some other branch into the `stable` branch:
+
+    git checkout stable
+    git cherry-pick <revision-hash>
