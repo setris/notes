@@ -282,7 +282,7 @@ Using the example from @ariejan's blog post on the subject:
            \
             76cada - 62ecb3 - b886a0 [feature]
 
-Cherry pick commit `62ecb3` into the master branch:
+To cherry-pick commit `62ecb3` from the `feature` branch into the `master` branch:
 
     git checkout master
     git cherry-pick 62ecb3
