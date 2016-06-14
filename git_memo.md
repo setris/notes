@@ -276,7 +276,7 @@ Show changes that occurred on b2 since b1 was started off of it (i.e. their comm
 
 ### Cherry-pick specific changes from another branch
 
-Using the example from @ariejan's blog post on the subject:
+Using the example from @ariejan's [blog post](https://ariejan.net/2010/06/10/cherry-picking-specific-commits-from-another-branch/) on the subject:
 
     dd2e86 - 946992 - 9143a9 - a6fd86 - 5a6057 [master]
            \
